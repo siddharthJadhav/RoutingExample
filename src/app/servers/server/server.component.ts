@@ -14,7 +14,7 @@ export class ServerComponent implements OnInit {
   constructor(private serversService: ServersService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const serverId: number =  +this.route.snapshot.params['id'];
+    const serverId: number = this.route.snapshot.params['id'] ? +this.route.snapshot.params['id'] : 1;
     console.log('serverId : ', serverId);
     this.server = this.serversService.getServer(serverId);
     console.log('serevr : ', this.server);
