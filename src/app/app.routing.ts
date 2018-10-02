@@ -9,7 +9,8 @@ const appRoutes: Routes = [
     {path : '' , component: HomeComponent},
     {path: 'servers', component: ServersComponent},
     {path: 'server/:id', component: ServerComponent},
-    {path: 'users', component: UsersComponent}
+    {path: 'users', component: UsersComponent},
+    {path: 'users/:id', component: UsersComponent}
 ];
 
 @NgModule({
